@@ -1,6 +1,6 @@
 footer {
   position: relative;
-  background-color: $text-color;
+  background-color: #f5f5f5;
 
   .header-primary {
     position: relative;
@@ -17,12 +17,19 @@ footer {
 
   .footer-content {
     padding: 30px 15px 60px;
-  }
 
-  .newsletter {
-    @extend %column;
-    @extend %col-md-6;
-    @extend %col-sm-8;
+    .contact {
+      @extend %column;
+      @extend %col-md-6;
+      @extend %col-sm-8;
+
+      color: #000;
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+
   }
 
   .social {
