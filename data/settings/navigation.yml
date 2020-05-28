@@ -1,5 +1,10 @@
 nav_items: 
   - {label: 'Home', path: '/'}
-  - {label: 'Products', path: '/products/'}
-  - {label: 'News', path: '/news'}
-
+  - {label: 'Events', path: '/events'}
+  - {label: 'Resources', path: '/resources'}
+  - {label: 'Board members', path: '/board'}
+  - {label: 'Membership', path: '/membership'}
+  - {label: 'Certification', path: '/certification'}
+  - {label: 'Public notices', path: '/notices'}
+  - {label: 'Jobs', path: '/jobs'}
+  - {label: 'Contact', path: '/contact'}
