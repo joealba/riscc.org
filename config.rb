@@ -10,6 +10,8 @@ Slim::Engine.set_options shortcut: {
   '#' => { tag: 'div', attr: 'id' }, '.' => { tag: 'div', attr: 'class' }
 }
 
+set :haml, { format: :html5 }
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
