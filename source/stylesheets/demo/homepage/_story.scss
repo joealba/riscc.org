@@ -1,12 +1,11 @@
 .homepage-story {
-  background: $secondary-color;
+  background-color: #dddddd;
 
   .story-content {
     @extend %column;
     @extend %col-sm-8;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px;
-    color: rgba(255, 255, 255, 1);
 
     h2 {
       margin: 0 0 15px;
