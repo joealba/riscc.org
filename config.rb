@@ -27,12 +27,6 @@ page '/*.txt', layout: false
 page "/partials/*", layout: false
 page "/admin/*", layout: false
 
-activate :blog do |blog|
-  blog.permalink = "news/{year}/{title}.html"
-  blog.sources = "posts/{title}.html"
-  blog.layout = "news-detail"
-end
-
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -40,13 +34,13 @@ end
 # https://middlemanapp.com/advanced/dynamic-pages/
 
 # proxy event.yml files to event.html 
-# data.events.each do |_filename, event|
-#   # event is an array: [filename, {data}]
-#   proxy "/event/#{event[:title].parameterize}/index.html", "event.html", 
-#   locals: {event: event}, 
-#   layout: 'event-detail',
-#   ignore: true
-# end
+data.events.each do |_filename, event|
+  # event is an array: [filename, {data}]
+  proxy "/event/#{event[:title].parameterize}/index.html", "event.html", 
+  locals: {event: event}, 
+  layout: 'event-detail',
+  ignore: true
+end
 
 # Helpers
 # Methods defined in the helpers block are available in templates
