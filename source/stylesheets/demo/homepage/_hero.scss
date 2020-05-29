@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   padding-top: 1em;
-  padding-bottom: 3em;
+  padding-bottom: 8em;
   padding-right: 40%;
   background-size: cover;
   background-position: center right;
@@ -19,14 +19,16 @@
   }
 
   h1 {
+    margin: 0;
     padding-top: 0.5em;
 
-    @media screen and (max-width: $screen-md-max){
-
-    }
     @media screen and (max-width: $screen-xs-max){
       padding-top: 0;
     }
+  }
+
+  @media screen and (max-width: $screen-md-max){
+    padding-bottom: 1em;
   }
 
   @media screen and (max-width: 500px){
