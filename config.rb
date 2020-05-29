@@ -34,13 +34,13 @@ page "/admin/*", layout: false
 # https://middlemanapp.com/advanced/dynamic-pages/
 
 # proxy event.yml files to event.html 
-data.events.each do |_filename, event|
-  # event is an array: [filename, {data}]
-  proxy "/event/#{event[:title].parameterize}/index.html", "event.html", 
-  locals: {event: event}, 
-  layout: 'event-detail',
-  ignore: true
-end
+# data.events.each do |_filename, event|
+#   # event is an array: [filename, {data}]
+#   proxy "/event/#{event[:title].parameterize}/index.html", "event.html", 
+#   locals: {event: event}, 
+#   layout: 'event-detail',
+#   ignore: true
+# end
 
 # Helpers
 # Methods defined in the helpers block are available in templates
