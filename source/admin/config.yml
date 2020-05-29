@@ -9,7 +9,7 @@ public_folder: /images/uploads
 collections:
   - name: event
     label: Event
-    folder: source/events/
+    folder: data/events/
     extension: yml
     format: yml
     create: true
