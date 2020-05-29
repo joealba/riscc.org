@@ -7,24 +7,6 @@ public_folder: /images/uploads
 #publish_mode: editorial_workflow #optional, enables publishing workflow
 
 collections:
-  #yaml middleman data example
-  - name: product
-    label: Product
-    format: yml
-    extension: yml
-    folder: data/products/
-    create: true
-    slug: '{{title}}'
-    fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Publish Date, name: date, widget: datetime}
-      - {label: Image, name: image, widget: image, required: true}
-
-      - {label: Weight, name: weight, widget: number}
-      - {label: Price, name: price, widget: number}
-      - {label: Body, name: body, widget: markdown}
-
-#markdown middleman blog example
   - name: blog
     label: Blog
     folder: source/posts/
@@ -38,6 +20,25 @@ collections:
       - {label: Description, name: description, widget: string}
       - {label: Image, name: image, widget: image}
       - {label: Body, name: body, widget: markdown}
+
+  - name: events
+    label: Events
+    folder: source/events/
+    extension: .html.md
+    format: frontmatter
+    create: true
+    slug: '{{event_date}-{title}}'
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: Event date, name: event_date, widget: date}
+      - {label: Event time, name: event_time, widget: string}
+      - {label: Location, name: location, widget: string}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Contact name, name: contact_name, widget: string, required: false}
+      - {label: Contact e-mail, name: contact_email, widget: string, required: false}
+      - {label: Contact phone, name: contact_phone, widget: string, required: false}
+      - {label: Link title, name: link_title, widget: string, required: false}
+      - {label: Link URL, name: url, widget: string, required: false}
 
   - name: pages
     label: Pages
@@ -77,10 +78,10 @@ collections:
             name: currency
             widget: select
             options: ['€', '$', '£']
-            default: '€'
+            default: '$'
 
           - label: Weight
             name: weight
             widget: select
             options: ['kg', ' st', ' lb']
-            default: 'kg'
+            default: 'lb'

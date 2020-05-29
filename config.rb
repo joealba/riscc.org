@@ -39,14 +39,14 @@ end
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
-# proxy product.yml files to product.html 
-data.products.each do |_filename, product|
-  # product is an array: [filename, {data}]
-  proxy "/product/#{product[:title].parameterize}/index.html", "product.html", 
-  locals: {product: product}, 
-  layout: 'product-detail',
-  ignore: true
-end
+# proxy event.yml files to event.html 
+# data.events.each do |_filename, event|
+#   # event is an array: [filename, {data}]
+#   proxy "/event/#{event[:title].parameterize}/index.html", "event.html", 
+#   locals: {event: event}, 
+#   layout: 'event-detail',
+#   ignore: true
+# end
 
 # Helpers
 # Methods defined in the helpers block are available in templates

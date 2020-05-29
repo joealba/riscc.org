@@ -1,0 +1,20 @@
+.event-detail
+  .content
+    .meta
+      %h1= event.title
+
+      %h3
+        When:
+        %span= event.event_date.strftime("%M %d, %Y")
+        %span= event.event_time
+
+      %h3
+        Where:
+        %span = event.location
+
+    .body
+      = markdown event.body
+
+    .contact
+      = event.contact_name
+      = event.contact_email
