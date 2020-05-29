@@ -62,7 +62,7 @@ helpers do
   end
 
   def markdown(content)
-     Tilt['markdown'].new { content }.render
+    Tilt['markdown'].new { content }.render(scope = self)
   end
 end
 
