@@ -27,7 +27,7 @@ collections:
     extension: .html.md
     format: frontmatter
     create: true
-    slug: '{{event_date}}-{{title}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
     fields:
       - {label: Title, name: title, widget: string, required: true}
       - {label: Event date, name: event_date, widget: datetime, timeFormat: false}
