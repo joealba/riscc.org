@@ -6,7 +6,8 @@
   background-size: cover;
   background-position: center right;
   background-color: #d8e2e4;
-
+  clear: both;
+  
   .caption {
     @extend %container;
   }
