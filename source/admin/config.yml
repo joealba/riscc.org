@@ -30,7 +30,7 @@ collections:
     slug: '{{event_date}}-{{title}}'
     fields:
       - {label: Title, name: title, widget: string, required: true}
-      - {label: Event date, name: event_date, widget: date}
+      - {label: Event date, name: event_date, widget: datetime, timeFormat: false}
       - {label: Event time, name: event_time, widget: string}
       - {label: Location, name: location, widget: string}
       - {label: Body, name: body, widget: markdown}
