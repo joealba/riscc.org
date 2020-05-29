@@ -5,16 +5,22 @@
 
       %h3
         When:
-        %span= event.event_date.strftime("%M %d, %Y")
+        %span= event.event_date.strftime("%A, %b %d, %Y")
         %span= event.event_time
 
       %h3
         Where:
-        %span = event.location
+        %span= event.location
 
-    .body
-      = markdown event.body
+      .body
+        =markdown event.body
 
-    .contact
-      = event.contact_name
-      = event.contact_email
+      -if event.contact_name.present?
+        .contact
+          Contact:
+          = event.contact_name
+
+          -if event.contact_email.present?
+            %a{href: "mailto:#{event.contact_email}"}= event.contact_email
+
+    %hr

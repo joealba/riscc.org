@@ -3,8 +3,9 @@
     .container
       .row
         .title
-          - date = Date.parse current_page.data.event_date.to_s
-          span.date = date.strftime("%d-%m-%Y")
+          / - date = Date.parse current_page.data.event_date.to_s
+          / span.date = date.strftime("%d-%m-%Y")
+          div = current_page.data.event_date
           h1 = current_page.data.title
 
       .row.content

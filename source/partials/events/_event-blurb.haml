@@ -1,0 +1,6 @@
+.event-blurb
+  %h3
+    =link_to event.title, '/events', class: 'cta'
+  %div
+    %span= event.event_date.strftime("%A, %b %d, %Y")
+    %span= event.event_time
