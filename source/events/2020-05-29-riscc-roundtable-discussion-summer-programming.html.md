@@ -1,0 +1,21 @@
+---
+title: "RISCC Roundtable Discussion: Summer Programming"
+event_date: 2020-06-17T01:39:18.471Z
+event_time: 11:00AM to 12:00PM
+location: ZOOM Call- Registration Link Below
+---
+AGENDA:    
+
+* Opening presentation on Summer Programming from Pawtucket Housing Authority
+* Questions and Answers
+* RISCC Member Open Sharing of Best Practices around Plans for Summer Programming
+
+OPENING PRESENTER: Maryrose Mensah, Resident Services Manager, Pawtucket Housing Authority
+
+The event is FREE to RISCC Members. 
+
+Earn 1 hour credit toward certification. 
+
+[Register in advance for this meeting by following this link](https://us02web.zoom.us/meeting/register/tZMudOugrTgvEt2542aoxuQanX8civYm_vnM)
+
+After registering, you will receive a confirmation email containing information about joining the meeting.
