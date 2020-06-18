@@ -3,11 +3,11 @@
     %h2 Events
 
     .items
-      - data.events.map(&:last).select{|e| e.event_date >= Time.now}.sort{|a,b| b.event_date <=> a.event_date}.each do |event|
+      - data.events.map(&:last).select{|e| e.event_date >= Time.now}.sort{|a,b| a.event_date <=> b.event_date}.each do |event|
         = partial 'partials/events/event', locals: {event: event}
 
     %h2 Recent past events
 
     .items
-      - data.events.map(&:last).select{|e| e.event_date < Time.now && e.event_date > Time.now - 60*60*24*30}.sort{|a,b| a.event_date <=> b.event_date}.each do |event|
+      - data.events.map(&:last).select{|e| e.event_date < Time.now && e.event_date > Time.now - 60*60*24*30}.sort{|a,b| b.event_date <=> a.event_date}.each do |event|
         = partial 'partials/events/event', locals: {event: event}

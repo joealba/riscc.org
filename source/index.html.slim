@@ -11,7 +11,8 @@ section.hero style=background_image(image_path(data.pages.home.hero.image))
 
 section.homepage-events.events
   .container
-    h2
-      | Upcoming events
-    - data.events.map(&:last).select{|e| e.event_date >= Time.now}.sort{|a,b| b.event_date <=> a.event_date}.each do |event|
-      = partial 'partials/events/event-blurb', locals: {event: event}
+    - events = data.events.map(&:last).select{|e| e.event_date >= Time.now}
+    - if events.length > 0
+      h2 Upcoming events
+      - data.events.map(&:last).select{|e| e.event_date >= Time.now}.sort{|a,b| b.event_date <=> a.event_date}.each do |event|
+        = partial 'partials/events/event-blurb', locals: {event: event}
