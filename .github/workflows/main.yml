@@ -12,8 +12,6 @@ jobs:
   deploy:
     name: 'Deploy'
     runs-on: ubuntu-latest
-    build_command:
-      bundle exec middleman build
 
     steps:
       - uses: actions/checkout@v1
@@ -23,3 +21,5 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
           NETLIFY_DEPLOY_TO_PROD: true
+          build_command:
+            bundle exec middleman build
