@@ -14,5 +14,5 @@ section.homepage-events.events
     - events = data.events.map(&:last).select{|e| e.event_date >= Time.now}
     - if events.length > 0
       h2 Upcoming events
-      - data.events.map(&:last).select{|e| e.event_date >= Time.now}.sort{|a,b| b.event_date <=> a.event_date}.each do |event|
+      - data.events.map(&:last).select{|e| e.event_date >= Time.now}.sort{|a,b| a.event_date <=> b.event_date}.each do |event|
         = partial 'partials/events/event-blurb', locals: {event: event}
