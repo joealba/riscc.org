@@ -2,12 +2,12 @@
   width: 100%;
   padding-top: 1em;
   padding-bottom: 8em;
-  padding-right: 40%;
+  padding-right: 50%;
   background-size: cover;
   background-position: center right;
   background-color: #d8e2e4;
   clear: both;
-  
+
   .caption {
     @extend %container;
   }
@@ -15,7 +15,7 @@
   .story-content {
     @extend %column;
     @extend %col-xs-12;
-    @extend %col-sm-8;
+    @extend %col-sm-7;
     margin: 0;
   }
 
