@@ -1,10 +1,10 @@
-nav_items: 
+nav_items:
   - {label: 'Home', path: '/'}
   - {label: 'Events', path: '/events'}
   - {label: 'Resources', path: '/resources'}
-  - {label: 'Board members', path: '/board'}
+  - {label: 'Board', path: '/board'}
   - {label: 'Membership', path: '/membership'}
   - {label: 'Certification', path: '/certification'}
-  - {label: 'Public notices', path: '/notices'}
+  - {label: 'Notices', path: '/notices'}
   - {label: 'Jobs', path: '/jobs'}
   - {label: 'Contact', path: '/contact'}

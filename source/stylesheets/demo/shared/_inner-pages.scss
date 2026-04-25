@@ -1,0 +1,195 @@
+// Inner page structure: page header banner + readable content width
+
+.section {
+  > .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+
+    // Page title banner
+    > h2:first-child {
+      background: linear-gradient(135deg, $secondary-color 0%, $primary-color 100%);
+      color: #fff;
+      margin: 0 -1.5rem 2rem;
+      padding: 1.25rem 1.5rem;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+  }
+}
+
+// Revision/datestamp note
+.revised {
+  font-size: 1rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+// Resource/membership panels
+.panel {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+  h3 {
+    margin: 0 0 1rem;
+    color: $secondary-color;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid $background-primary-color;
+  }
+
+  &.callout {
+    background: $background-primary-color;
+    border-left: 4px solid $primary-color;
+    font-size: 1rem;
+    color: #374151;
+  }
+}
+
+// Download/external links styled as buttons
+.section a[href$=".pdf"],
+.section a[href$=".PDF"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: $primary-color;
+  color: #fff !important;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0.25rem 0;
+  transition: background-color 0.15s, box-shadow 0.15s;
+
+  &::before {
+    content: "↓";
+    font-weight: 700;
+  }
+
+  &:hover, &:focus {
+    background: darken(#0e7490, 8%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+}
+
+// Resource dl links (external URLs, not PDFs)
+.section .panel dl {
+  margin: 0;
+
+  dt {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-color;
+
+    a {
+      color: $primary-color;
+      text-decoration: underline;
+      font-weight: 600;
+
+      &:hover {
+        color: darken(#0e7490, 10%);
+      }
+    }
+  }
+
+  dd {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #4b5563;
+
+    a {
+      color: $primary-color;
+      word-break: break-all;
+    }
+  }
+}
+
+// Membership ul/ol lists
+.section ul, .section ol {
+  font-size: 1rem;
+  line-height: 1.75;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+}
+
+// Board member cards
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.board-card {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-top: 4px solid $primary-color;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+    color: $secondary-color;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  p.title {
+    color: $primary-color;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.5rem;
+  }
+
+  a.email {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: $primary-color;
+    text-decoration: underline;
+    word-break: break-all;
+
+    &:hover {
+      color: darken(#0e7490, 10%);
+    }
+  }
+}
+
+// Inner page h3/h4 subheadings
+.section h3 {
+  color: $secondary-color;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.section h4 {
+  color: $secondary-color;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
