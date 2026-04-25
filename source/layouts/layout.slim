@@ -8,9 +8,10 @@ html
     // Include netlify identity widget for user registration
     script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript" 
   body
+    a.skip-to-main href='#main-content' Skip to main content
     = partial 'partials/shared/header-primary'
 
-    main.main-content
+    main#main-content.main-content
       = yield
     = partial 'partials/shared/footer'
 
