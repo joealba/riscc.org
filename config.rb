@@ -56,7 +56,7 @@ helpers do
   
   def nav_link(link_text, url, options = {})
     options[:class] ||= ""
-    options[:class] << " active" if url == current_page.url
+    options[:class] << " active" if current_page.url.chomp("/") == url.chomp("/")
     link_to(link_text, url, options)
   end
 
