@@ -3,6 +3,18 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   color: $text-color;
+  background-color: $background-primary-color;
+}
+
+// Small uppercase label used above a heading to add hierarchy without
+// relying on size alone (e.g. "Non-profit organization" above the homepage h1)
+.eyebrow {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
 }
 
 p {

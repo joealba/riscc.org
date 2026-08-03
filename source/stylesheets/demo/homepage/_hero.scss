@@ -1,4 +1,5 @@
 section.hero {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 36%;
   gap: 2rem;
@@ -8,13 +9,21 @@ section.hero {
   }
 
   padding: 3em 2em;
-  background: linear-gradient(135deg, #1e3a5f 0%, #0e7490 100%);
+  background:
+    radial-gradient(circle, rgba(217, 119, 6, 0.22) 0, rgba(217, 119, 6, 0.22) 2px, transparent 2px) 0 0/28px 28px,
+    linear-gradient(135deg, #1e3a5f 0%, #0e7490 100%);
   color: #fff;
+  overflow: hidden;
 
   .section-header {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    .eyebrow {
+      color: #fbbf24;
+    }
 
     h1 {
       margin: 0 0 0.75rem;
@@ -56,13 +65,17 @@ section.hero {
 .homepage-events {
   clear: both;
   padding: 2.5rem 1.5rem;
+  background-color: $background-secondary-color;
 
   h2 {
+    position: relative;
     color: $secondary-color;
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem;
+    padding-left: 1rem;
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: -0.01em;
+    border-left: 4px solid $accent-color;
   }
 
   .event-blurb {
@@ -100,7 +113,14 @@ section.hero {
       font-size: 1rem;
 
       span {
-        margin-right: 0.75rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-top: 0.35rem;
+        padding: 0.2em 0.7em;
+        background: $accent-soft-bg;
+        color: $accent-color-dark;
+        font-weight: 600;
+        border-radius: 999px;
       }
     }
   }

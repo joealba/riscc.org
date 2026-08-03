@@ -1,6 +1,7 @@
 footer {
   position: relative;
   background-color: $secondary-color;
+  border-top: 3px solid $accent-color;
   color: rgba(255, 255, 255, 0.85);
 
   .footer-content {

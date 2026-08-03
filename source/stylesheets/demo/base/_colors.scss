@@ -1,6 +1,14 @@
 $primary-color: #0e7490;
 $secondary-color: #1e3a5f;
 
+// Warm gold, pulled from the sun in the RISCC logo. Used as a decorative/
+// highlight accent (icon badges, borders, small labels) so the palette
+// doesn't read as all-blue. $accent-color-dark is for text on light
+// backgrounds where the brighter gold doesn't meet contrast requirements.
+$accent-color: #d97706;
+$accent-color-dark: #92400e;
+$accent-soft-bg: #fff7ed;
+
 $text-color: #1f2937;
 
 $background-primary-color: #f1f5f9;
